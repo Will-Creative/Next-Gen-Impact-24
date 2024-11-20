@@ -72,7 +72,29 @@
 </body> 
   
 <script>
- 
+ // Intersection Observer callback function
+const fadeInOnScroll = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in'); // Add class when the element is in view
+    } else {
+      entry.target.classList.remove('fade-in'); // Remove class when out of view
+    }
+  });
+};
+
+// Set up the IntersectionObserver
+const observer = new IntersectionObserver(fadeInOnScroll, {
+  threshold: 0.5, // 50% of the element must be visible
+});
+
+// Select all headers in your sections
+const headers = document.querySelectorAll('.text-container h1, .text-container h2, .text-container h3');
+
+// Observe each header
+headers.forEach(header => {
+  observer.observe(header);
+});
 </script>
 
 </body>
