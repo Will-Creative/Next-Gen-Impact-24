@@ -28,7 +28,6 @@
   left: 50%; /* Horizontally centers it */
   transform: translate(-50%, -50%); /* Adjusts position to truly center */
   text-align: center; /* Centers the whole text block */
-  word-spacing: 2rem; /* Adjusts the space between words */
   line-height: 1; /* Adjusts the space between lines of text */
 }
 
