@@ -18,12 +18,12 @@
 
 .text-container h1 {
   font-size: 2rem;
-  color: #fefffeff;
   font-family: 'Century Gothic', sans-serif;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
                0 0 10px rgba(255, 255, 255, 0.4),
                0 0 15px rgba(255, 255, 255, 0.3);
-  animation: shimmer 3s infinite alternate; /* Apply shimmer animation */
+  color: #fefffe; /* Keeps the text color constant */
+  animation: shimmer-glow 2s infinite alternate; /* Apply shimmer glow animation */
   position: absolute; /* Absolute positioning */
   top: 50%; /* Vertically centers it */
   left: 50%; /* Horizontally centers it */
@@ -76,20 +76,19 @@
 }
 
 /* Animations */
-@keyframes shimmer {
+
+@keyframes shimmer-glow {
   0% {
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.3);
-    color: #fefffe; /* Original color */
   }
   50% {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.7), 0 0 45px rgba(255, 255, 255, 0.5);
-    color: #f39c12; /* New color (e.g., amber) */
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.7), 0 0 45px rgba(255, 255, 255, 0.5);
   }
   100% {
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.3);
-    color: #fefffe; /* Back to original color */
   }
 }
+
 @keyframes blink {
   0%, 100% { opacity: 0; }
   50% { opacity: 1; }
