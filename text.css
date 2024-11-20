@@ -53,6 +53,12 @@
   left: 0; /* Left-aligned */
 }
 
+.text-container h1, .text-container h2, .text-container h3 {
+  opacity: 0; /* Initially invisible */
+  animation: fadeIn 1.5s ease-out forwards;
+  visibility: hidden; /* To prevent jumping effect */
+}
+
 .scroll-down {
   position: absolute;
   bottom: 20px;
@@ -106,7 +112,15 @@
       2px 0 10px rgba(255, 255, 255, 0.2);
   }
 }
-
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes blink {
   0%, 100% { opacity: 0; }
   50% { opacity: 1; }
