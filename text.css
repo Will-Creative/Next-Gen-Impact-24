@@ -27,6 +27,8 @@
   top: 50%; /* Vertically centers it */
   left: 50%; /* Horizontally centers it */
   transform: translate(-50%, -50%); /* Adjusts position to truly center */
+  text-align: center; /* Centers the whole text block */
+  word-spacing: 1rem; /* Adjusts the space between words */
 }
 
 .text-container h2 {
