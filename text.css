@@ -10,9 +10,7 @@
   flex-direction: column; /* Stacks the items vertically */
   justify-content: flex-start; /* Aligns items at the start of the container */
   align-items: center; /* Center items horizontally */
-  height: 100dvh; /* Full height of the viewport */
-  width: 100vw;
-  position: relative; /* To control absolute positioning of elements */
+  height: 100%; /* Full height of the viewport */
   padding: 24px;
   z-index: 10;
 }
@@ -24,6 +22,7 @@
                0 0 10px rgba(255, 255, 255, 0.4),
                0 0 15px rgba(255, 255, 255, 0.3);
   color: #fefffe; /* Keeps the text color constant */
+  position: absolute;
   top: 50%; /* Vertically centers it */
   left: 50%; /* Horizontally centers it */
   transform: translate(-50%, -50%); /* Adjusts position to truly center */
