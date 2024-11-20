@@ -10,7 +10,8 @@
   flex-direction: column; /* Stacks the items vertically */
   justify-content: flex-start; /* Aligns items at the start of the container */
   align-items: center; /* Center items horizontally */
-  height: 100%; /* Full height of the viewport */
+  height: 100dvh; /* Full height of the viewport */
+  width: 100vw;
   position: relative; /* To control absolute positioning of elements */
   padding: 24px;
   z-index: 10;
