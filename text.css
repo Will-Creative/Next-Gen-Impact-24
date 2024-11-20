@@ -5,6 +5,17 @@
      font-size: 32px; 
     }
 
+/* Initial state - headers are hidden */
+.fade-in-out {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+/* Active state - headers become visible */
+.fade-in-out.visible {
+  opacity: 1;
+}
+
 .text-container {
   display: flex; /* Enables flexbox */
   flex-direction: column; /* Stacks the items vertically */
@@ -51,12 +62,6 @@
   position: absolute; /* Absolute positioning */
   top: 0; /* Positioned at the top of the screen */
   left: 0; /* Left-aligned */
-}
-
-.text-container h1, .text-container h2, .text-container h3 {
-  opacity: 0; /* Initially invisible */
-  animation: fadeIn 1.5s ease-out forwards;
-  visibility: hidden; /* To prevent jumping effect */
 }
 
 .scroll-down {
@@ -112,15 +117,7 @@
       2px 0 10px rgba(255, 255, 255, 0.2);
   }
 }
-/* Fade-in animation */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+
 @keyframes blink {
   0%, 100% { opacity: 0; }
   50% { opacity: 1; }
