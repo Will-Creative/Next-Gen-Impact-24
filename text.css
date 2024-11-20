@@ -23,8 +23,7 @@
                0 0 10px rgba(255, 255, 255, 0.4),
                0 0 15px rgba(255, 255, 255, 0.3);
   color: #fefffe; /* Keeps the text color constant */
-  animation: shimmer-glow 6s infinite alternate; /* Apply shimmer glow animation */
-  position: absolute; /* Absolute positioning */
+  animation: sweeping-pulsing-shimmer 5s infinite alternate; /* Apply sweeping + pulsing shimmer effect */
   top: 50%; /* Vertically centers it */
   left: 50%; /* Horizontally centers it */
   transform: translate(-50%, -50%); /* Adjusts position to truly center */
@@ -77,15 +76,36 @@
 
 /* Animations */
 
-@keyframes subtle-shimmer {
+@keyframes sweeping-pulsing-shimmer {
   0% {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 0 0 10px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.2);
+    text-shadow: 
+      0 0 5px rgba(255, 255, 255, 0.4), 
+      -5px 0 10px rgba(255, 255, 255, 0.3), 
+      5px 0 15px rgba(255, 255, 255, 0.2);
+  }
+  25% {
+    text-shadow: 
+      5px 0 8px rgba(255, 255, 255, 0.5), 
+      -10px 0 12px rgba(255, 255, 255, 0.4), 
+      10px 0 18px rgba(255, 255, 255, 0.3);
   }
   50% {
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5), 0 0 12px rgba(255, 255, 255, 0.4), 0 0 18px rgba(255, 255, 255, 0.3);
+    text-shadow: 
+      0 0 10px rgba(255, 255, 255, 0.6), 
+      10px 0 15px rgba(255, 255, 255, 0.5), 
+      -10px 0 20px rgba(255, 255, 255, 0.4);
+  }
+  75% {
+    text-shadow: 
+      -5px 0 8px rgba(255, 255, 255, 0.5), 
+      5px 0 12px rgba(255, 255, 255, 0.4), 
+      -10px 0 18px rgba(255, 255, 255, 0.3);
   }
   100% {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 0 0 10px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.2);
+    text-shadow: 
+      0 0 5px rgba(255, 255, 255, 0.4), 
+      -5px 0 10px rgba(255, 255, 255, 0.3), 
+      5px 0 15px rgba(255, 255, 255, 0.2);
   }
 }
 
