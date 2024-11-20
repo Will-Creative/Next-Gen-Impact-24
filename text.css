@@ -29,6 +29,7 @@
   transform: translate(-50%, -50%); /* Adjusts position to truly center */
   text-align: center; /* Centers the whole text block */
   word-spacing: 1rem; /* Adjusts the space between words */
+  line-height: 0.5; /* Adjusts the space between lines of text */
 }
 
 .text-container h2 {
