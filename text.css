@@ -33,10 +33,6 @@
                0 0 15px rgba(255, 255, 255, 0.3);
   color: #fefffe; /* Keeps the text color constant */
   animation: sweeping-pulsing-shimmer 9s infinite alternate; /* Apply sweeping + pulsing shimmer effect */
-  position: absolute;
-  top: 50%; /* Vertically centers it */
-  left: 50%; /* Horizontally centers it */
-  transform: translate(-50%, -50%); /* Adjusts position to truly center */
   text-align: center; /* Centers the whole text block */
   line-height: 1; /* Adjusts the space between lines of text */
 }
