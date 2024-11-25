@@ -66,6 +66,18 @@
   max-width: 80%; /* Optional: limit the width of the paragraph for readability */
   line-height: 1; /* Adjust line height for readability */
 }
+.text-container p2 {
+  color: #fefffe; /* Keep the text color constant for the paragraph */
+  font-family: 'Century Gothic', sans-serif;
+  text-align: center; /* Centers the paragraph text */
+  margin-top: 1rem; /* Space between the header and paragraph */
+  max-width: 80%; /* Optional: limit the width of the paragraph for readability */
+  letter-spacing: -0.05em;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+               0 0 10px rgba(255, 255, 255, 0.4),
+               0 0 15px rgba(255, 255, 255, 0.3);
+}
+
 
 .scroll-down {
   position: absolute;
