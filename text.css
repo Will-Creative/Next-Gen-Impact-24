@@ -58,7 +58,7 @@
   left: 0; /* Left-aligned */
 }
 
-.text-container p {
+.text-container p1 {
   color: #fefffe; /* Keep the text color constant for the paragraph */
   font-family: 'Courier New', Courier, monospace;
   text-align: center; /* Centers the paragraph text */
