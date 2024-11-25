@@ -131,11 +131,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Add the 'visible' class to fade in the section
         section.classList.add('visible');
 
-        // Animate the slot machine numbers if they exist in the section
+        // Animate the count-up number if they exist in the section
         const slotContainers = section.querySelectorAll('.slot-container');
         slotContainers.forEach((container) => {
           const finalNumber = parseInt(container.getAttribute('data-number'), 10);
-          animateSlotNumber(container, finalNumber);
+          countUp(container, finalNumber);
         });
       } else {
         // Remove the 'visible' class to fade out the section
@@ -149,30 +149,28 @@ document.addEventListener('DOMContentLoaded', () => {
   sections.forEach((section) => observer.observe(section));
 });
 
-function animateSlotNumber(container, finalNumber) {
-  // Clear the container for safety
-  container.innerHTML = '';
+function countUp(container, finalNumber) {
+  const startNumber = 0;
+  const duration = 2; // Duration in seconds for counting up to final number
+  const delay = 1000; // Delay before starting the count-up (in milliseconds)
 
-  const slotNumber = document.createElement('div');
-  slotNumber.classList.add('slot-number');
+  // Set initial value
+  container.textContent = startNumber;
 
-  // Generate numbers from 0 to finalNumber
-  for (let i = 0; i <= finalNumber; i++) {
-    const span = document.createElement('span');
-    span.textContent = i;
-    slotNumber.appendChild(span);
-  }
-
-  container.appendChild(slotNumber);
-
-  // Calculate animation duration based on the final number
-  const duration = 1 + finalNumber * 0.05; // Adjust timing if needed
-  slotNumber.style.animationDuration = `${duration}s`;
-
-  // Optional: Clean up and set the final number after animation
+  // Start the count-up after the delay
   setTimeout(() => {
-    container.textContent = finalNumber;
-  }, duration * 2000);
+    const increment = Math.floor(finalNumber / (duration * 10)); // Increment per step
+    let currentNumber = startNumber;
+
+    const interval = setInterval(() => {
+      currentNumber += increment;
+      if (currentNumber >= finalNumber) {
+        currentNumber = finalNumber;
+        clearInterval(interval);
+      }
+      container.textContent = currentNumber;
+    }, 100); // Update every 100ms (adjust for speed)
+  }, delay);
 }
 </script>
 
