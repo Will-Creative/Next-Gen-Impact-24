@@ -60,11 +60,11 @@
 
 .text-container p1 {
   color: #fefffe; /* Keep the text color constant for the paragraph */
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Andale Mono', monospace;
   text-align: center; /* Centers the paragraph text */
   margin-top: 2rem; /* Space between the header and paragraph */
   max-width: 80%; /* Optional: limit the width of the paragraph for readability */
-  line-height: 1.6; /* Adjust line height for readability */
+  line-height: 1; /* Adjust line height for readability */
 }
 
 .scroll-down {
