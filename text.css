@@ -47,7 +47,7 @@
   font-size: 12px; /* Default font size */
   font-family: 'Century Gothic', sans-serif;
   text-align: center; /* Centers the paragraph text */
-  margin-top: 1rem; /* Space between the header and paragraph */
+  margin-top: 0.5rem; /* Space between the header and paragraph */
   max-width: 80%; /* Optional: limit the width of the paragraph for readability */
   letter-spacing: -0.05em;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
