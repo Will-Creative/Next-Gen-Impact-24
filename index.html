@@ -48,6 +48,7 @@
     <p class="p1 fade-in-out">
       kids | youth | young adults
     </p>
+    <div class="slot-container" data-number="5000"></div>
   </div>
 </div>
 
@@ -119,30 +120,60 @@ document.addEventListener('DOMContentLoaded', () => {
   const options = {
     root: null, // Viewport
     rootMargin: '0px',
-    threshold: 0.2, // Trigger when 20% of the element is visible
+    threshold: 0.1, // Trigger when 10% of the section is visible
   };
 
-  // Create the observer
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      const header = entry.target;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const section = entry.target;
 
-      // If the header is visible in the viewport, add the 'visible' class
       if (entry.isIntersecting) {
-        header.classList.add('visible');
+        // Add the 'visible' class to fade in the section
+        section.classList.add('visible');
+
+        // Animate the slot machine numbers if they exist in the section
+        const slotContainers = section.querySelectorAll('.slot-container');
+        slotContainers.forEach((container) => {
+          const finalNumber = parseInt(container.getAttribute('data-number'), 10);
+          animateSlotNumber(container, finalNumber);
+        });
       } else {
-        header.classList.remove('visible');
+        // Remove the 'visible' class to fade out the section
+        section.classList.remove('visible');
       }
     });
   }, options);
 
-  // Select all the headers you want to fade in/out
-  const headers = document.querySelectorAll('.fade-in-out');
-  headers.forEach(header => {
-    observer.observe(header); // Start observing each header
-  });
+  // Observe all fade-in-out sections
+  const sections = document.querySelectorAll('.fade-in-out');
+  sections.forEach((section) => observer.observe(section));
 });
 
+function animateSlotNumber(container, finalNumber) {
+  // Clear the container for safety
+  container.innerHTML = '';
+
+  const slotNumber = document.createElement('div');
+  slotNumber.classList.add('slot-number');
+
+  // Generate numbers from 0 to finalNumber
+  for (let i = 0; i <= finalNumber; i++) {
+    const span = document.createElement('span');
+    span.textContent = i;
+    slotNumber.appendChild(span);
+  }
+
+  container.appendChild(slotNumber);
+
+  // Calculate animation duration based on the final number
+  const duration = 1 + finalNumber * 0.05; // Adjust timing if needed
+  slotNumber.style.animationDuration = `${duration}s`;
+
+  // Optional: Clean up and set the final number after animation
+  setTimeout(() => {
+    container.textContent = finalNumber;
+  }, duration * 1000);
+}
 </script>
 
 </body>
