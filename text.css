@@ -1,9 +1,3 @@
- <style>
-    :root {
-      --fade-in-speed: 1s;
-      --fade-out-speed: 0.5s;
-     font-size: 32px; 
-    }
 
 /* Initial state - headers are hidden */
 .fade-in-out {
