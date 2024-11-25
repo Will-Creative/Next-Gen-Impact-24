@@ -50,10 +50,7 @@
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
                0 0 10px rgba(255, 255, 255, 0.4),
                0 0 15px rgba(255, 255, 255, 0.3);
-  position: absolute; /* Absolute positioning */
-  top: 0; /* Positioned at the top of the screen */
-  left: 50%; /* Horizontally centers it */
-  transform: translateX(-50%); /* Adjusts for true centering */
+  margin-top: 25%; /* Moves the title a fourth of the way down */
 }
 
 .text-container h3 {
