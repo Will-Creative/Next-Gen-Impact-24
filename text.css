@@ -65,31 +65,17 @@
   line-height: 1; /* Adjust line height for readability */
 }
 
+/* Slot container styling */
 .slot-container {
   display: inline-block;
-  overflow: hidden;
-  height: 4em; /* Make the container taller so numbers fit */
-  width: 3em; /* Ensure the width can fit the number */
+  width: auto;
+  height: 4em; /* Adjust height as needed */
   position: relative;
-  font-size: 3rem; /* Adjust for readability */
+  font-size: 3rem; /* Adjust font size */
   font-family: sans-serif;
   text-align: center;
-  line-height: 4em; /* Match the height for vertical centering */
-  border: 1px solid #fff; /* Just for visibility during debugging */
-}
-
-.slot-number {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  transform: translateY(100%); /* Start off-screen */
-  animation: slot-spin 2s ease-in-out forwards; /* Adjust duration to ensure visible transition */
-}
-
-.slot-number span {
-  display: block;
+  line-height: 4em;
+  border: 1px solid #fff; /* Border for debugging */
 }
 
 .scroll-down {
@@ -155,20 +141,6 @@
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(10px); }
 }
-
-/* Slot machine animation */
-@keyframes slot-spin {
-  0% {
-    transform: translateY(100%); /* Start below the container */
-  }
-  50% {
-    transform: translateY(0); /* Scroll to the normal position */
-  }
-  100% {
-    transform: translateY(-100%); /* End above the container */
-  }
-}
-
 
 @media (min-width: 640px) { /* sm */
   .text-container .p1 {
