@@ -68,13 +68,13 @@
 /* Slot container styling */
 .slot-container {
   display: inline-block;
-  width: auto;
-  height: 4em; /* Adjust height as needed */
+  width: 4em;
+  height: 3em; /* Adjust height as needed */
   position: relative;
+  color: white;
   font-size: 3rem; /* Adjust font size */
   font-family: sans-serif;
   text-align: center;
-  line-height: 4em;
   border: 1px solid #fff; /* Border for debugging */
 }
 
