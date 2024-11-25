@@ -62,7 +62,7 @@
   color: #fefffe; /* Keep the text color constant for the paragraph */
   font-family: 'Andale Mono', monospace;
   text-align: center; /* Centers the paragraph text */
-  margin-top: 2rem; /* Space between the header and paragraph */
+  margin-top: 1rem; /* Space between the header and paragraph */
   max-width: 80%; /* Optional: limit the width of the paragraph for readability */
   line-height: 1; /* Adjust line height for readability */
 }
