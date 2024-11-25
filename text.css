@@ -68,6 +68,7 @@
 .slot-container {
   display: inline-block;
   overflow: hidden;
+  color: #fefffe; /* Keep the text color constant for the paragraph */
   height: 2em; /* Adjust to the height of your font size */
   width: 1.5em; /* Adjust to fit the numbers */
   position: relative;
