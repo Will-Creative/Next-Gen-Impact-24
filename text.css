@@ -68,14 +68,14 @@
 .slot-container {
   display: inline-block;
   overflow: hidden;
-  color: #fefffe; /* Keep the text color constant for the paragraph */
-  height: 2em; /* Adjust to the height of your font size */
-  width: 1.5em; /* Adjust to fit the numbers */
+  height: 4em; /* Make the container taller so numbers fit */
+  width: 3em; /* Ensure the width can fit the number */
   position: relative;
-  font-size: 2rem;
+  font-size: 3rem; /* Adjust for readability */
   font-family: sans-serif;
   text-align: center;
-  line-height: 2em; /* Match the height for vertical centering */
+  line-height: 4em; /* Match the height for vertical centering */
+  border: 1px solid #fff; /* Just for visibility during debugging */
 }
 
 .slot-number {
@@ -85,7 +85,7 @@
   display: flex;
   flex-direction: column;
   transform: translateY(100%); /* Start off-screen */
-  animation: slot-spin 1.5s ease-in-out forwards; /* Adjust duration */
+  animation: slot-spin 2s ease-in-out forwards; /* Adjust duration to ensure visible transition */
 }
 
 .slot-number span {
