@@ -34,8 +34,7 @@
   color: #fefffe; /* Keeps the text color constant */
   animation: sweeping-pulsing-shimmer 9s infinite alternate; /* Apply sweeping + pulsing shimmer effect */
   text-align: center; /* Centers the whole text block */
-  margin-top: auto;
-  margin-bottom: auto;
+  margin-top: 30vh; /* Moves the title a fourth of the way down */
   line-height: 1; /* Adjusts the space between lines of text */
 }
 
@@ -47,13 +46,6 @@
                0 0 10px rgba(255, 255, 255, 0.4),
                0 0 15px rgba(255, 255, 255, 0.3);
   margin-top: 20vh; /* Moves the title a fourth of the way down */
-}
-
-.text-container h3 {
-  color: #fefffeff;
-  position: absolute; /* Absolute positioning */
-  top: 0; /* Positioned at the top of the screen */
-  left: 0; /* Left-aligned */
 }
 
 .text-container .p1 {
