@@ -159,12 +159,16 @@
 /* Slot machine animation */
 @keyframes slot-spin {
   0% {
-    transform: translateY(100%);
+    transform: translateY(100%); /* Start below the container */
+  }
+  50% {
+    transform: translateY(0); /* Scroll to the normal position */
   }
   100% {
-    transform: translateY(0%);
+    transform: translateY(-100%); /* End above the container */
   }
 }
+
 
 @media (min-width: 640px) { /* sm */
   .text-container .p1 {
