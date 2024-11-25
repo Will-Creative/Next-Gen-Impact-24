@@ -58,7 +58,7 @@
   left: 0; /* Left-aligned */
 }
 
-.text-container p1 {
+.text-container .p1 {
   color: #fefffe; /* Keep the text color constant for the paragraph */
   font-family: 'Century Gothic', sans-serif;
   text-align: center; /* Centers the paragraph text */
@@ -70,7 +70,7 @@
                0 0 15px rgba(255, 255, 255, 0.3);
 }
 
-.text-container p2 {
+.text-container .p2 {
   color: #fefffe; /* Keep the text color constant for the paragraph */
   font-family: 'Andale Mono', monospace;
   text-align: center; /* Centers the paragraph text */
