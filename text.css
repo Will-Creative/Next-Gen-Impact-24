@@ -58,7 +58,7 @@
 .text-container .p2 {
   color: #fefffe; /* Keep the text color constant for the paragraph */
   font-family: 'Andale Mono', monospace;
-  font-size: 12px; /* Default font size */
+  font-size: 16px; /* Default font size */
   text-align: center; /* Centers the paragraph text */
   margin-top: 1rem; /* Space between the header and paragraph */
   max-width: 80%; /* Optional: limit the width of the paragraph for readability */
@@ -131,10 +131,10 @@
 
 @media (min-width: 640px) { /* sm */
   .text-container .p1 {
-    font-size: 10px; /* Font size for sm screens */
+    font-size: 12px; /* Font size for sm screens */
   }
   .text-container .p2 {
-    font-size: 12px; /* Font size for sm screens */
+    font-size: 16px; /* Font size for sm screens */
   }
 }
 
@@ -149,18 +149,18 @@
 
 @media (min-width: 1024px) { /* lg */
   .text-container .p1 {
-    font-size: 24px; /* Font size for lg screens */
+    font-size: 20px; /* Font size for lg screens */
   }
   .text-container .p2 {
-    font-size: 28px; /* Font size for lg screens */
+    font-size: 24px; /* Font size for lg screens */
   }
 }
 
 @media (min-width: 1280px) { /* xl */
   .text-container .p1 {
-    font-size: 32px; /* Font size for xl screens */
+    font-size: 24px; /* Font size for xl screens */
   }
   .text-container .p2 {
-    font-size: 36px; /* Font size for xl screens */
+    font-size: 32px; /* Font size for xl screens */
   }
 }
