@@ -27,7 +27,6 @@
 }
 
 .text-container h1 {
-  font-size: 3rem;
   font-family: 'Century Gothic', sans-serif;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
                0 0 10px rgba(255, 255, 255, 0.4),
@@ -43,7 +42,6 @@
 }
 
 .text-container h2 {
-  font-size: 2rem;
   color: #fefffeff;
   text-align: center;
   font-family: 'Century Gothic', sans-serif;
@@ -54,7 +52,6 @@
 }
 
 .text-container h3 {
-  font-size: 1rem;
   color: #fefffeff;
   position: absolute; /* Absolute positioning */
   top: 0; /* Positioned at the top of the screen */
