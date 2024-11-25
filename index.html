@@ -134,8 +134,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // Animate the count-up number if they exist in the section
         const slotContainers = section.querySelectorAll('.slot-container');
         slotContainers.forEach((container) => {
-          const finalNumber = parseInt(container.getAttribute('data-number'), 10);
-          countUp(container, finalNumber);
+          const finalNumber = parseInt(container.getAttribute('data-number'), 10); // Ensure finalNumber is parsed correctly
+          if (!isNaN(finalNumber)) { // Check if finalNumber is a valid number
+            countUp(container, finalNumber);  // Pass the finalNumber to countUp function
+          } else {
+            console.error("Invalid number in data-number attribute");
+          }
         });
       } else {
         // Remove the 'visible' class to fade out the section
@@ -172,6 +176,7 @@ function countUp(container, finalNumber) {
     }, 100); // Update every 100ms (adjust for speed)
   }, delay);
 }
+
   console.log('Starting count up for:', finalNumber);
 console.log('Current Number:', currentNumber);
 </script>
