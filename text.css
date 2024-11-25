@@ -34,7 +34,8 @@
   color: #fefffe; /* Keeps the text color constant */
   animation: sweeping-pulsing-shimmer 9s infinite alternate; /* Apply sweeping + pulsing shimmer effect */
   text-align: center; /* Centers the whole text block */
-  margin-top: 50vh;
+  margin-top: auto;
+  margin-bottom: auto;
   line-height: 1; /* Adjusts the space between lines of text */
 }
 
