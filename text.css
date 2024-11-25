@@ -50,7 +50,7 @@
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
                0 0 10px rgba(255, 255, 255, 0.4),
                0 0 15px rgba(255, 255, 255, 0.3);
-  margin-top: 25vh; /* Moves the title a fourth of the way down */
+  margin-top: 20vh; /* Moves the title a fourth of the way down */
 }
 
 .text-container h3 {
